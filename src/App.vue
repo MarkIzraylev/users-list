@@ -177,7 +177,8 @@
 
   // оставляет от даты и времени только дату
   function truncateDate(stringDate) {
-    return new Date(new Date(stringDate).toLocaleDateString())
+    const date = new Date(stringDate)
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate())
   }
 
   function sortByParameter(a, b, sortingValue) {
